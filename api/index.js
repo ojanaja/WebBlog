@@ -14,7 +14,11 @@ const fs = require('fs');
 const salt = bcrypt.genSaltSync(10);
 const secret = 'asdfe45we45w345wegw345werjktjwertkj';
 
-app.use(cors({ credentials: true, origin: 'https://web-blog-zeta-seven.vercel.app/' }));
+app.use(cors({
+    origin: 'https://web-blog-uttw.vercel.app',
+    methods: 'POST',
+    credentials: true,
+}));
 app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads', express.static(__dirname + '/uploads'));
